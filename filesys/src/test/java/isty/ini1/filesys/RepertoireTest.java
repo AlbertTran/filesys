@@ -178,7 +178,7 @@ public class RepertoireTest {
 	}
 
 	/**
-	 * Test d'ajout d'un repertoire dans lui-même (indirectement)
+	 * Test d'ajout d'un repertoire dans lui meme (indirectement).
 	 * Exception attendue : AjoutLuiMemeException
 	 * 
 	 * @throws AjoutNullException
