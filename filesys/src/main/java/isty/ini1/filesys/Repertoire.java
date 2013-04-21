@@ -52,7 +52,7 @@ public class Repertoire extends Element {
 	 * Ajout d'un element dans le repertoire.
 	 * 
 	 * @param parElement
-	 *            Element ajouté
+	 *            Element ajoute
 	 * @throws AjoutNullException
 	 *             Exception AjoutNullException
 	 * @throws NomExistantException

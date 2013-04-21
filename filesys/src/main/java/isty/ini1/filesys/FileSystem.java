@@ -12,10 +12,10 @@ import isty.ini1.filesys.exceptions.NomExistantException;
  */
 public class FileSystem {
 	/**
-	 * Méthode main
-	 * Creation de repertoires et de fichiers vérifiant le bon fonctionement
+	 * Methode main
+	 * Creation de repertoires et de fichiers verifiant le bon fonctionement
 	 * du systeme de fichier.
-	 * Implementation de blocs try et catch gérant les differents exceptions traitees.
+	 * Implementation de blocs try et catch gerant les differents exceptions traitees.
 	 * 
 	 * @param args
 	 *            Arguments

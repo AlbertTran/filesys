@@ -33,7 +33,7 @@ public class Fichier extends Element {
 		super(parNom);
 		if (parTaille < 0) {
 			throw new FichierTailleIncorrecteException(
-					"La taille du fichier est négative");
+					"La taille du fichier est negative");
 		}
 		taille = parTaille;
 	}

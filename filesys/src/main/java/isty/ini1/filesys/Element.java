@@ -10,8 +10,8 @@ package isty.ini1.filesys;
  * @author (Albert TRAN, Salwan SAIF)
  * @version (21/04/2013)
  * 
- * Classe abstraite représentant une element : fichier ou repertoire.
- * Un element est caractérisé par son nom et sa taille.
+ * Classe abstraite representant une element : fichier ou repertoire.
+ * Un element est caracterise par son nom et sa taille.
  * Les elements composent le systeme de fichier.
  */
 public abstract class Element {

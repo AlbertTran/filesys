@@ -7,8 +7,8 @@ package isty.ini1.filesys.exceptions;
  * @author (Albert TRAN, Salwan SAIF)
  * @version (21/04/2013)
  * 
- * Hérite de la classe RepertoireException qui gère les exceptions
- * d'un repertoire. Ici l'ajout d'un element avec une reference null est géré.
+ * Herite de la classe RepertoireException qui gère les exceptions
+ * d'un repertoire. Ici l'ajout d'un element avec une reference null est gere.
  */
 public class AjoutNullException extends RepertoireException {
 
