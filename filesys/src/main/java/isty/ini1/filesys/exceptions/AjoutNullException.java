@@ -2,15 +2,21 @@ package isty.ini1.filesys.exceptions;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class AjoutNullException.
+ * Classe AjoutNullException.
+ * 
+ * @author (Albert TRAN, Salwan SAIF)
+ * @version (21/04/2013)
+ * 
+ * Hérite de la classe RepertoireException qui gère les exceptions
+ * d'un repertoire. Ici l'ajout d'un element avec une reference null est géré.
  */
 public class AjoutNullException extends RepertoireException {
 
 	/**
-	 * Instantiates a new ajout null exception.
+	 * Instantie une nouvelle exception AjoutNullException.
 	 * 
 	 * @param parMessage
-	 *            the par message
+	 *            Chaine de caractere du message d'erreur envoye
 	 */
 	public AjoutNullException(String parMessage) {
 		super(parMessage);

@@ -2,15 +2,21 @@ package isty.ini1.filesys.exceptions;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class FichierTailleIncorrecteException.
+ * Classe FichierTailleIncorrecteException.
+ * 
+ * @author (Albert TRAN, Salwan SAIF)
+ * @version (21/04/2013)
+ * 
+ * Hérite de la classe Exception qui gère les exceptions.
+ * Ici l'ajout d'un fichier de taille incorrecte est géré.
  */
 public class FichierTailleIncorrecteException extends Exception {
 
 	/**
-	 * Instantiates a new fichier taille incorrecte exception.
+	 * Instantie une nouvelle exception FichierTailleIncorrecteException.
 	 * 
 	 * @param parMessage
-	 *            the par message
+	 *            Chaine de caractere du message d'erreur envoye
 	 */
 	public FichierTailleIncorrecteException(String parMessage) {
 		super(parMessage);

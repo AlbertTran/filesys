@@ -8,31 +8,35 @@ import java.util.ArrayList;
 
 // TODO: Auto-generated Javadoc
 /**
- * Write a description of class Repertoire here.
+ * Classe repertoire.
  * 
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Albert TRAN, Salwan SAIF)
+ * @version (21/04/2013)
+ * 
+ * Un repertoire herite de la classe element.
+ * Il possede une liste d'elements (repertoire ou fichier).
+ * 
  */
 public class Repertoire extends Element {
 
-	/** The contenu. */
-	private final ArrayList<Element> contenu;
+	/** Liste des elements contenus dans le repertoire */
+	private ArrayList<Element> contenu;
 
 	/**
-	 * Constructor for objects of class Repertoire.
+	 * Constructeur
 	 * 
 	 * @param parNom
-	 *            the par nom
+	 *            Chaine de caractere du nom de l'element
 	 */
 	public Repertoire(String parNom) {
 		super(parNom);
-		contenu = new ArrayList<Element>();
+		contenu = new ArrayList<Element>(); 
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see ini1.filesys.Element#getTaille()
+	/**
+	 *  
+	 * Calcul de la taille d'un repertoire, recursivite.
+	 * Taille = Taille de tous les fichiers et repertoires contenus.
 	 */
 	@Override
 	public int getTaille() {
@@ -45,16 +49,16 @@ public class Repertoire extends Element {
 	}
 
 	/**
-	 * Ajout.
+	 * Ajout d'un element dans le repertoire.
 	 * 
 	 * @param parElement
-	 *            the par element
+	 *            Element ajouté
 	 * @throws AjoutNullException
-	 *             the ajout null exception
+	 *             Exception AjoutNullException
 	 * @throws NomExistantException
-	 *             the nom existant exception
+	 *             Exception AjoutLuiMemeException
 	 * @throws AjoutLuiMemeException
-	 *             the ajout lui meme exception
+	 *             Exception AjoutLuiMemeException
 	 */
 	public void ajout(Element parElement) throws AjoutNullException,
 			NomExistantException, AjoutLuiMemeException {
@@ -72,11 +76,11 @@ public class Repertoire extends Element {
 	}
 
 	/**
-	 * Nom existe.
+	 * Teste si l'element existe.
 	 * 
 	 * @param parNom
-	 *            the par nom
-	 * @return true, if successful
+	 *            Le nom de l'element
+	 * @return vrai, si il existe
 	 */
 	public boolean nomExiste(String parNom) {
 		for (Element e : contenu) {
@@ -89,15 +93,15 @@ public class Repertoire extends Element {
 	}
 
 	/**
-	 * Contient lui meme.
+	 * Teste si le repertoire se contient lui meme.
 	 * 
 	 * @param parElement
-	 *            the par element
-	 * @return true, if successful
+	 *            Le nom de l'element
+	 * @return vrai, s'il se contient
 	 */
 	public boolean contientLuiMeme(Element parElement) {
 		boolean test = false;
-		if (parElement.estRepertoire()) {
+		if (parElement instanceof Repertoire) {
 			Repertoire rep = (Repertoire) parElement;
 			if (rep == this) {
 				// les rÃ©pertoires sont identiques
@@ -113,20 +117,10 @@ public class Repertoire extends Element {
 		return test;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see ini1.filesys.Element#estRepertoire()
-	 */
-	@Override
-	public boolean estRepertoire() {
-		return true;
-	}
-
 	/**
-	 * Gets the contenu.
+	 * Retourne le contenu du repertoire.
 	 * 
-	 * @return the contenu
+	 * @return la liste d'elements contenus
 	 */
 	public ArrayList<Element> getContenu() {
 		return contenu;

@@ -12,18 +12,26 @@ import org.junit.Test;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class RepertoireTest.
+ * Classe RepertoireTest.
+ * 
+ * @author (Albert TRAN, Salwan SAIF)
+ * @version (21/04/2013)
+ * 
+ * Classe implementant les tests JUNIT 4 d'un repertoire.
+ * Exceptions gerees : AjoutNullException, NomExistantException; AjoutLuiMemeException.
  */
+
 public class RepertoireTest {
 
-	/** The f3. */
+	/** Les fichiers contenus */
 	private Fichier f1, f2, f3;
 
-	/** The r3. */
+	/** Les repertoires */
 	private Repertoire r1, r2, r3;
 
 	/**
-	 * Sets the up.
+	 * Instanciation des fichiers et repertoire.
+	 * setUp est une methode effectuee avant chaque test.
 	 */
 
 	@Before
@@ -42,7 +50,8 @@ public class RepertoireTest {
 	}
 
 	/**
-	 * Tear down.
+	 * Rend null tous les objets instancies (non-obligatoire)
+	 * tearDown est une methode effectuee apres chaque test.
 	 */
 	@After
 	public void tearDown() {
@@ -55,14 +64,14 @@ public class RepertoireTest {
 	}
 
 	/**
-	 * Test get taille.
+	 * Test de calculs de taille de repertoires valides.
 	 * 
 	 * @throws AjoutNullException
-	 *             the ajout null exception
+	 *             Exception AjoutNullException
 	 * @throws NomExistantException
-	 *             the nom existant exception
+	 *             Exception NomExistantException
 	 * @throws AjoutLuiMemeException
-	 *             the ajout lui meme exception
+	 *             Exception AjoutLuiMemeException
 	 */
 	@Test
 	public void testGetTaille() throws AjoutNullException,
@@ -80,14 +89,15 @@ public class RepertoireTest {
 	}
 
 	/**
-	 * Test ajout reference nulle.
+	 * Test d'ajout d'un element de reference null dans un repertoire.
+	 * Exception attendue : AjoutNullException
 	 * 
 	 * @throws AjoutNullException
-	 *             the ajout null exception
+	 *             Exception AjoutNullException
 	 * @throws NomExistantException
-	 *             the nom existant exception
+	 *             Exception NomExistantException
 	 * @throws AjoutLuiMemeException
-	 *             the ajout lui meme exception
+	 *             Exception AjoutLuiMemeException
 	 */
 	@Test(expected = AjoutNullException.class)
 	public void testAjoutReferenceNulle() throws AjoutNullException,
@@ -96,14 +106,15 @@ public class RepertoireTest {
 	}
 
 	/**
-	 * Test ajout meme nom d'element.
+	 * Test d'ajout d'un repertoire ayant le meme nom qu'un fichier dans un meme repertoire.
+	 * Exception attendue : NomExistantException
 	 * 
 	 * @throws AjoutNullException
-	 *             the ajout null exception
+	 *             Exception AjoutNullException
 	 * @throws NomExistantException
-	 *             the nom existant exception
+	 *             Exception NomExistantException
 	 * @throws AjoutLuiMemeException
-	 *             the ajout lui meme exception
+	 *             Exception AjoutLuiMemeException
 	 */
 	@Test(expected = NomExistantException.class)
 	public void testAjoutMemeNomElt() throws AjoutNullException,
@@ -114,14 +125,15 @@ public class RepertoireTest {
 	}
 
 	/**
-	 * Test ajout meme nom de repertoire.
+	 * Test d'ajout d'un fichier ayant le meme nom qu'un autre fichier dans un meme repertoire.
+	 * Exception attendue : NomExistantException
 	 * 
 	 * @throws AjoutNullException
-	 *             the ajout null exception
+	 *             Exception AjoutNullException
 	 * @throws NomExistantException
-	 *             the nom existant exception
+	 *             Exception NomExistantException
 	 * @throws AjoutLuiMemeException
-	 *             the ajout lui meme exception
+	 *             Exception AjoutLuiMemeException
 	 */
 	@Test(expected = NomExistantException.class)
 	public void testAjoutMemeNomFic() throws AjoutNullException,
@@ -131,14 +143,15 @@ public class RepertoireTest {
 	}
 
 	/**
-	 * Test ajout meme nom fichier.
+	 * Test d'ajout d'un repertoire ayant le meme nom qu'un autre repertoire dans un meme repertoire.
+	 * Exception attendue : NomExistantException
 	 * 
 	 * @throws AjoutNullException
-	 *             the ajout null exception
+	 *             Exception AjoutNullException
 	 * @throws NomExistantException
-	 *             the nom existant exception
+	 *             Exception NomExistantException
 	 * @throws AjoutLuiMemeException
-	 *             the ajout lui meme exception
+	 *             Exception AjoutLuiMemeException
 	 */
 	@Test(expected = NomExistantException.class)
 	public void testAjoutMemeNomRep() throws AjoutNullException,
@@ -148,14 +161,15 @@ public class RepertoireTest {
 	}
 
 	/**
-	 * Test ajout lui meme.
+	 * Test d'ajout d'un repertoire dans lui meme.
+	 * Exception attendue : AjoutLuiMemeException
 	 * 
 	 * @throws AjoutNullException
-	 *             the ajout null exception
+	 *             Exception AjoutNullException
 	 * @throws NomExistantException
-	 *             the nom existant exception
+	 *             Exception NomExistantException
 	 * @throws AjoutLuiMemeException
-	 *             the ajout lui meme exception
+	 *             Exception AjoutLuiMemeException
 	 */
 	@Test(expected = AjoutLuiMemeException.class)
 	public void testAjoutLuiMeme() throws AjoutNullException,
@@ -164,14 +178,15 @@ public class RepertoireTest {
 	}
 
 	/**
-	 * Test ajout sous rep lui meme.
+	 * Test d'ajout d'un repertoire dans lui-même (indirectement)
+	 * Exception attendue : AjoutLuiMemeException
 	 * 
 	 * @throws AjoutNullException
-	 *             the ajout null exception
+	 *             Exception AjoutNullException
 	 * @throws NomExistantException
-	 *             the nom existant exception
+	 *             Exception NomExistantException
 	 * @throws AjoutLuiMemeException
-	 *             the ajout lui meme exception
+	 *             Exception AjoutLuiMemeException
 	 */
 	@Test(expected = AjoutLuiMemeException.class)
 	public void testAjoutSousRepLuiMeme() throws AjoutNullException,

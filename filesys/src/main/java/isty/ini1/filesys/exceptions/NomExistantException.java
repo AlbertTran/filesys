@@ -2,15 +2,21 @@ package isty.ini1.filesys.exceptions;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class NomExistantException.
+ * Classe NomExistantException.
+ * 
+ * @author (Albert TRAN, Salwan SAIF)
+ * @version (21/04/2013)
+ * 
+ * Hérite de la classe RepertoireException qui gère les exceptions
+ * d'un repertoire. Ici l'ajout de 2 elements ayant le meme nom est géré.
  */
 public class NomExistantException extends RepertoireException {
 
 	/**
-	 * Instantiates a new nom existant exception.
+	 * Instantie une nouvelle exception NomExistantException.
 	 * 
 	 * @param parMessage
-	 *            the par message
+	 *            Chaine de caractere du message d'erreur envoye
 	 */
 	public NomExistantException(String parMessage) {
 		super(parMessage);

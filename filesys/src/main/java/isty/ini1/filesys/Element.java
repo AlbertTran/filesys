@@ -5,22 +5,26 @@ package isty.ini1.filesys;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class Element.
+ * Classe Element.
  * 
  * @author (Albert TRAN, Salwan SAIF)
- * @version (24/04/2013)
+ * @version (21/04/2013)
+ * 
+ * Classe abstraite représentant une element : fichier ou repertoire.
+ * Un element est caractérisé par son nom et sa taille.
+ * Les elements composent le systeme de fichier.
  */
 public abstract class Element {
 
 	// instance variables - replace the example below with your own
 	/** The nom. */
-	private final String nom;
+	private String nom;
 
 	/**
-	 * Constructor for objects of class Entite.
+	 * Constructeur
 	 * 
 	 * @param parNom
-	 *            the par nom
+	 *            Chaine de caractere du nom de l'element
 	 */
 	public Element(String parNom) {
 		// initialise instance variables
@@ -31,6 +35,7 @@ public abstract class Element {
 	 * Gets the nom.
 	 * 
 	 * @return the nom
+	 * 
 	 */
 	public String getNom() {
 		return nom;
@@ -42,12 +47,5 @@ public abstract class Element {
 	 * @return the taille
 	 */
 	public abstract int getTaille();
-
-	/**
-	 * Est repertoire.
-	 * 
-	 * @return true, si l'Ã©lÃ©ment est un rÃ©pertoire (utilisÃ© d
-	 */
-	public abstract boolean estRepertoire();
 
 }

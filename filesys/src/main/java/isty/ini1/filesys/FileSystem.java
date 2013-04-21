@@ -7,14 +7,18 @@ import isty.ini1.filesys.exceptions.NomExistantException;
 
 // TODO: Auto-generated Javadoc
 /**
- * Hello world!.
+ * @author (Albert TRAN, Salwan SAIF)
+ * @version (21/04/2013)
  */
 public class FileSystem {
 	/**
-	 * The main method.
+	 * Méthode main
+	 * Creation de repertoires et de fichiers vérifiant le bon fonctionement
+	 * du systeme de fichier.
+	 * Implementation de blocs try et catch gérant les differents exceptions traitees.
 	 * 
 	 * @param args
-	 *            the arguments
+	 *            Arguments
 	 */
 	public static void main(String[] args) {
 		try {

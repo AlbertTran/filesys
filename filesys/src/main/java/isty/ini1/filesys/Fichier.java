@@ -4,55 +4,46 @@ import isty.ini1.filesys.exceptions.FichierTailleIncorrecteException;
 
 // TODO: Auto-generated Javadoc
 /**
- * Write a description of class Fichier here.
+ * Classe Fichier.
  * 
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Albert TRAN, Salwan SAIF)
+ * @version (21/04/2013)
+ *
+ * Un fichier herite de la classe element.
+ * Il possede une taille et peut etre contenu dans un repertoire.
  */
 public class Fichier extends Element {
 
 	// instance variables - replace the example below with your own
-	/** The taille. */
-	private final int taille;
+	/** Taille du fichier */
+	private int taille;
 
 	/**
-	 * Constructor for objects of class Fichier.
+	 * Constructeur
 	 * 
 	 * @param parNom
-	 *            the par nom
+	 *            Chaine de caractere du nom de l'element
 	 * @param parTaille
-	 *            the par taille
+	 *            Taille du fichier
 	 * @throws FichierTailleIncorrecteException
-	 *             the fichier taille incorrecte exception
+	 *             Exception FichierTailleIncorrecteException
 	 */
 	public Fichier(String parNom, int parTaille)
 			throws FichierTailleIncorrecteException {
 		super(parNom);
 		if (parTaille < 0) {
 			throw new FichierTailleIncorrecteException(
-					"La taille du fichier est nÃ©gative");
+					"La taille du fichier est négative");
 		}
 		taille = parTaille;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see ini1.filesys.Element#getTaille()
+	/**
+	 * Retourne la taille du fichier.
 	 */
 	@Override
 	public int getTaille() {
 		return taille;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see ini1.filesys.Element#estRepertoire()
-	 */
-	@Override
-	public boolean estRepertoire() {
-		return false;
 	}
 
 }
