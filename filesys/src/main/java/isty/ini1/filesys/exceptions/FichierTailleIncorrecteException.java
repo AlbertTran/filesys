@@ -7,7 +7,7 @@ package isty.ini1.filesys.exceptions;
  * @author (Albert TRAN, Salwan SAIF)
  * @version (21/04/2013)
  * 
- * Herite de la classe Exception qui gère les exceptions.
+ * Herite de la classe Exception qui gere les exceptions.
  * Ici l'ajout d'un fichier de taille incorrecte est gere.
  */
 public class FichierTailleIncorrecteException extends Exception {

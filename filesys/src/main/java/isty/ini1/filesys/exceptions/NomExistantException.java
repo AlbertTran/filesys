@@ -7,7 +7,7 @@ package isty.ini1.filesys.exceptions;
  * @author (Albert TRAN, Salwan SAIF)
  * @version (21/04/2013)
  * 
- * Herite de la classe RepertoireException qui gère les exceptions
+ * Herite de la classe RepertoireException qui gere les exceptions
  * d'un repertoire. Ici l'ajout de 2 elements ayant le meme nom est gere.
  */
 public class NomExistantException extends RepertoireException {
